@@ -326,6 +326,8 @@ describe('test/unit/lib/plugins/aws/deployFunction.test.js', () => {
       getFunction: {
         Configuration: {
           LastModified: '2020-05-20T15:34:16.494+0000',
+          State: 'Active',
+          LastUpdateStatus: 'Successful',
         },
       },
       updateFunctionCode: updateFunctionCodeStub,
@@ -408,6 +410,9 @@ describe('test/unit/lib/plugins/aws/deployFunction.test.js', () => {
             Configuration: {
               LastModified: '2020-05-20T15:34:16.494+0000',
               CodeSha256: imageSha,
+              State: 'Active',
+              LastUpdateStatus: 'Successful',
+
               ImageConfigResponse: {
                 ImageConfig: {
                   Command: ['anotherexecutable'],
@@ -452,6 +457,8 @@ describe('test/unit/lib/plugins/aws/deployFunction.test.js', () => {
             Configuration: {
               LastModified: '2020-05-20T15:34:16.494+0000',
               CodeSha256: imageSha,
+              State: 'Active',
+              LastUpdateStatus: 'Successful',
             },
           },
         },
@@ -482,6 +489,8 @@ describe('test/unit/lib/plugins/aws/deployFunction.test.js', () => {
               Configuration: {
                 LastModified: '2020-05-20T15:34:16.494+0000',
                 PackageType: 'Zip',
+                State: 'Active',
+                LastUpdateStatus: 'Successful',
               },
             },
           },
@@ -514,6 +523,8 @@ describe('test/unit/lib/plugins/aws/deployFunction.test.js', () => {
               Configuration: {
                 LastModified: '2020-05-20T15:34:16.494+0000',
                 PackageType: 'Image',
+                State: 'Active',
+                LastUpdateStatus: 'Successful',
               },
             },
           },
@@ -572,6 +583,8 @@ describe('test/unit/lib/plugins/aws/deployFunction.test.js', () => {
             Configuration: {
               LastModified: '2020-05-20T15:34:16.494+0000',
               PackageType: 'Zip',
+              State: 'Active',
+              LastUpdateStatus: 'Successful',
             },
           },
         },
@@ -644,6 +657,8 @@ describe('test/unit/lib/plugins/aws/deployFunction.test.js', () => {
             Configuration: {
               LastModified: '2020-05-20T15:34:16.494+0000',
               PackageType: 'Zip',
+              State: 'Active',
+              LastUpdateStatus: 'Successful',
             },
           },
         },
@@ -693,6 +708,8 @@ describe('test/unit/lib/plugins/aws/deployFunction.test.js', () => {
             Configuration: {
               LastModified: '2020-05-20T15:34:16.494+0000',
               PackageType: 'Zip',
+              State: 'Active',
+              LastUpdateStatus: 'Successful',
             },
           },
         },
@@ -755,6 +772,9 @@ describe('test/unit/lib/plugins/aws/deployFunction.test.js', () => {
               KMSKeyArn: kmsKeyArn,
               Description: description,
               Handler: handler,
+              State: 'Active',
+              LastUpdateStatus: 'Successful',
+
               Environment: {
                 Variables: {
                   ANOTHERVAR: 'anothervalue',
